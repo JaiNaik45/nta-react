@@ -1,0 +1,99 @@
+
+
+.sidebar {
+    height: 100%;
+    
+    position: fixed;
+    top: 0;
+    left: -250px; 
+    background-color: #150802;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    transition: 0.3s;
+    z-index: 1;
+}
+
+.sidebar a {
+    padding: 10px 15px;
+    text-align: left;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    display: flex;
+    align-items: center;
+    font-family: cursive;
+}
+
+.sidebar a .icon {
+    margin-right: 10px;
+}
+
+.title {
+    font-size: 24px;
+    color: aqua;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: cursive;
+    text-shadow: 0 0 10px aqua;
+}
+
+sub {
+    color: white;
+}
+
+/* .sidebar a:hover {
+    color: aqua;
+    text-shadow: 0 0 30px aqua;
+} */
+
+.dashboard-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+    color: aqua;
+    font-size: 24px;
+    z-index: 2;
+}
+
+.dashboard-button .icon {
+    margin-right: 10px;
+}
+
+
+.sidebar-active {
+    width: 250px;
+    left: 0;
+}
+.options{
+    margin-top: 30%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 5%;
+}
+.content
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-evenly;
+
+}
+.content div{
+    width:400px;
+    height: 400px;
+}
+.options{
+    display: flex;
+    flex-direction: row;
+    gap: 14px;
+    align-items: center;
+}
+.options-parent{
+    max-height: 11vh;
+}
