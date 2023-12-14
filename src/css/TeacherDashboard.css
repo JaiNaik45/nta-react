@@ -75,7 +75,9 @@
     min-width: 100vw;
     display: flex;
     gap: 40%;
-
-    
+  }
+  .teacher-right{
+    margin-top: 5%;
+    margin-bottom: 5%;
   }
 

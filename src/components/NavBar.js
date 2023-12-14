@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import '../css/Layout.css'
-import {Link} from 'react-router-dom'
+import {Link, NavLink} from 'react-router-dom'
 import { useNavigate } from "react-router-dom";
 import { useState } from 'react';
 import Cookies from 'js-cookie';
@@ -35,7 +35,7 @@ function NavBar(){
             <ul id="deatils">
                 <li><a href="/">Home</a></li>
                 <li><a href="#aboutpara">About</a></li>
-                <li id="listofcourses"> <a href="/">Courses</a></li>
+                <li id="listofcourses"><NavLink to="/allCourses">Courses</NavLink></li>
                 <li><Link to="/contactus">Contact</Link></li>
             </ul>
             <a href="/"><h2 className="LOGO">N<sub>2</sub>A</h2></a>
@@ -43,12 +43,22 @@ function NavBar(){
                 
         {
             loggedin === true ?(
+
                 <div className='navbar-loggedin'>
                     <div className='user-name'> {userDetails.name}</div>
                    <img src={profile} alt="Profile Picture" className='navbar-pic' onClick={()=>{
                     navigate('/studentdashboard/student/profile')
                    }}/>
+                   <button className="button" onClick={()=>{
+                    Cookies.remove('access_token')
+                    navigate('/')
+                    window.location.reload()
+                    }  
+                    }>Logout</button>
+                   
                 </div>
+                
+              
                 
             ):(
                 <div className='sign-log-buttons'>

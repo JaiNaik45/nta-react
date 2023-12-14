@@ -7,8 +7,11 @@ import {FaBook} from 'react-icons/fa'
 import { NavLink, Route, Routes } from 'react-router-dom';
 import '../css/TeacherDashboard.css'
 import AddCourse from './AddCourse';
+import Cookies from 'js-cookie';
+import { useNavigate } from 'react-router-dom';
 
 const TeacherSideBar=()=>{
+    const navigate = useNavigate();
     return(
         
         <div className="sidebar"> 
@@ -19,8 +22,13 @@ const TeacherSideBar=()=>{
             <li className="options-parent"><a href="#"><div className="options"><div><FaBook/> </div><div>My Course</div></div></a></li>
             <li className="options-parent"><NavLink to="teacher/createCourse"><div className="options"><div><AiOutlinePlus/></div> <div>Create Course</div></div></NavLink></li>
             
-            <li className="options-parent"><a href="#"><div className="options"><div><CgProfile/> </div><div>Profile</div></div></a></li>
-            <li className="options-parent"><a href="#"><div className="options"><div><HiOutlineLogout/></div> <div>Log Out</div></div></a></li>
+            <li className="options-parent"><NavLink to="teacher/profile"><div className="options"><div><CgProfile/> </div><div>Profile</div></div></NavLink></li>
+            <li className="options-parent"><div className="options" id='logout'><div><HiOutlineLogout/></div> <div onClick={()=>{
+                    Cookies.remove('access_token')
+                    navigate('/')
+                    window.location.reload()
+                    }  
+                    }>Log Out</div></div></li>
            
         </ul>
     </div>

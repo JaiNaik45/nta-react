@@ -21,25 +21,6 @@ function StudentSideBar() {
   const data=location.state;
   const navigate=useNavigate();
 
-  
-  useEffect(async ()=>{
-    
-    if(Object.is(data,null)){
-      setLogin(false);
-      if(Cookies.get('access_token')){
-        setLogin(true);
-        console.log(login);
-
-      }
-      else{
-        navigate('/login');
-
-      }
-    }
-    
-    
-    
-  },[])
 
   
   function toggleSidebar() {
@@ -131,7 +112,12 @@ s0.parentNode.insertBefore(s1,s0);})();
             <li className="options-parent"><a href="#"><div className="options"><div><AiOutlinePlus/></div> <div>All Courses</div></div></a></li>
             {/* <li className="options-parent"><a href="#"><div className="options"><div><FiEdit/> </div><div>Edit Course</div></div></a></li> */}
             <li className="options-parent"><NavLink to="student/profile" ><div className="options"><div><CgProfile/> </div><div>User Profile</div></div></NavLink></li>
-            <li className="options-parent"><a href="#"><div className="options"><div><HiOutlineLogout/></div> <div>Log Out</div></div></a></li>
+            <li className="options-parent"><div className="options" id="logout"><div><HiOutlineLogout/></div> <div onClick={()=>{
+                    Cookies.remove('access_token')
+                    navigate('/')
+                    window.location.reload()
+                    }  
+                    }>Log Out</div></div></li>
            
         </ul>
     </div>
