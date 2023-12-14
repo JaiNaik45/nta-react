@@ -1,0 +1,141 @@
+.heading {
+  width: 100vw;
+  margin: auto;
+  color: beige;
+}
+
+.course-main {
+  width: 80%;
+  min-height: 100%;
+  max-height: fit-content;
+  margin: auto;
+  margin-top: 0;
+  background-color: #595757;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.d1 {
+  display: flex;
+  position: sticky;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; /* Center align items vertically */
+  height: 20%;
+  background-color: #151414;
+}
+
+.course {
+  width: 24%;
+  height: 54%;
+  border-radius: 5%;
+  box-shadow: 0 0 5px 5px black;
+  z-index: 5;
+  margin: 2%;
+  display: flex;
+  background-color: #1a1919;
+  flex-direction: column;
+  color: blanchedalmond;
+}
+
+.c_1,
+.c_3,
+.c_4 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5%;
+  padding: 2%;
+  height: 10%;
+}
+
+.course i {
+  color: aqua;
+}
+
+.c_2 {
+  padding: 2%;
+  height: 12%;
+}
+
+.c_4 {
+  height: 20%;
+  border-bottom-right-radius: 15%;
+  border-bottom-left-radius: 15%;
+  background-color: #2d2d2d;
+}
+
+.c_4 div {
+  display: flex;
+  flex-direction: row;
+  width: 60%;
+  gap: 4%;
+  align-items: center;
+}
+
+.c_4 button {
+  color: beige;
+  font-family: 'Times New Roman', Times, serif;
+  background-color: rgb(18, 20, 20);
+  border-radius: 7%;
+  box-shadow: 0 0 1px 2px black;
+  margin-left: 20%;
+  margin-right: 2%;
+}
+
+.course img {
+  width: 100%;
+  height: 200px;
+  border-top-left-radius: 5%;
+  border-top-right-radius: 5%;
+}
+
+.Courses {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 80%;
+  gap: 1%;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.profile-container {
+  max-width: 800px;
+  margin: 50px auto;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.profile-header {
+  text-align: center;
+}
+
+.profile-header img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.profile-details {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.detail {
+  text-align: center;
+}
+
+.detail h2 {
+  color: #333;
+}
+
+.detail p {
+  color: #777;
+}

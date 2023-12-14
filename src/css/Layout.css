@@ -202,3 +202,21 @@ nav{
    
     background-position: center;
 }
+.navbar-loggedin{
+    display: flex;
+    align-items: center;
+    width: 15%;
+    gap: 20px;
+    border: 1px solid white;
+    justify-content: space-around;
+    font-size: 14px;
+    border-radius: 10px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+.navbar-pic{
+    height: 38px;
+    width: 38px;
+    border-radius: 50%;
+    
+}
